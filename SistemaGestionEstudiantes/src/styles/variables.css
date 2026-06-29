@@ -1,0 +1,69 @@
+/*
+  variables.css
+  Este archivo define los "tokens de diseño" de nuestra aplicación.
+  Aquí configuramos la paleta de colores, fuentes, sombras y bordes redondeados.
+  De esta forma, si queremos cambiar el color principal de la aplicación,
+  solo debemos hacerlo en este archivo y se actualizará en todo el sistema.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Fuentes */
+  --fuente-titulo: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --fuente-cuerpo: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Colores Principales (Violeta / Indigo premium) */
+  --color-primario: #5850ec;
+  --color-primario-hover: #4f46e5;
+  --color-primario-claro: #eef2ff;
+  
+  /* Colores Secundarios (Gris pizarra elegante) */
+  --color-secundario: #6b7280;
+  --color-secundario-hover: #4b5563;
+  --color-secundario-claro: #f3f4f6;
+
+  /* Colores de Estado */
+  --color-exito: #10b981;
+  --color-exito-claro: #ecfdf5;
+  --color-advertencia: #f59e0b;
+  --color-advertencia-claro: #fffbeb;
+  --color-error: #ef4444;
+  --color-error-claro: #fef2f2;
+  --color-info: #3b82f6;
+  --color-info-claro: #eff6ff;
+
+  /* Tonos Neutros para Fondos y Superficies */
+  --color-fondo: #f9fafb;
+  --color-tarjeta: #ffffff;
+  --color-borde: #e5e7eb;
+  --color-borde-focus: #a5b4fc;
+  
+  /* Tonos de Texto */
+  --color-texto: #111827;
+  --color-texto-secundario: #4b5563;
+  --color-texto-debil: #9ca3af;
+  --color-texto-blanco: #ffffff;
+
+  /* Bordes Redondeados */
+  --radio-xs: 4px;
+  --radio-sm: 8px;
+  --radio-md: 12px;
+  --radio-lg: 16px;
+  --radio-completo: 9999px;
+
+  /* Sombras (Box Shadows) para dar profundidad */
+  --sombra-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --sombra-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --sombra-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --sombra-premium: 0 20px 25px -5px rgba(88, 80, 236, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Tiempos de Transición para Micro-animaciones */
+  --transicion-rapida: 0.15s ease;
+  --transicion-normal: 0.25s ease;
+  --transicion-lenta: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Alturas y Espaciados Estándar */
+  --navbar-altura: 70px;
+  --max-ancho-app: 1280px;
+}

@@ -1,0 +1,104 @@
+/*
+  global.css
+  Este archivo contiene las reglas de estilo globales que afectan a toda la aplicación.
+  Configura la fuente de texto por defecto, los márgenes de reinicio (reset),
+  y el diseño base responsivo de las páginas.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulo);
+  color: var(--color-texto);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+  transition: color var(--transicion-rapida);
+}
+
+a:hover {
+  color: var(--color-primario-hover);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Scrollbar personalizado para darle un toque premium */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-fondo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--radio-completo);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Clases de Utilidad Globales */
+.contenedor {
+  width: 100%;
+  max-width: var(--max-ancho-app);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.desvanecer-entrada {
+  animation: fadeIn var(--transicion-normal);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estructura Base de la App */
+.layout-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contenido-principal {
+  flex: 1;
+  padding: 2rem 0;
+}
