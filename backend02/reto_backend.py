@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-from math import sqrt
 from others import es_primo
 
 app = Flask(__name__)
@@ -18,7 +17,7 @@ def reto01():
 
         numero = request.json.get("numero")
 
-        if not isinstance(numero, int) or len(str(numero)) != 2:
+        if not isinstance(numero, int) or numero < 0 or len(str(numero)) != 2:
             return (
                 jsonify(
                     {
@@ -70,7 +69,7 @@ def reto03():
 
         numero = request.json.get("numero")
 
-        if not isinstance(numero, int) or len(str(numero)) != 2:
+        if not isinstance(numero, int) or numero < 0 or len(str(numero)) != 2:
             return (
                 jsonify(
                     {
@@ -105,8 +104,10 @@ def reto04():
 
         if (
             not isinstance(primer_numero, int)
+            or primer_numero < 0
             or len(str(primer_numero)) != 2
             or not isinstance(segundo_numero, int)
+            or segundo_numero < 0
             or len(str(segundo_numero)) != 2
         ):
             return (
@@ -138,7 +139,7 @@ def reto05():
 
         numero = request.json.get("numero")
 
-        if not isinstance(numero, int) or len(str(numero)) != 3:
+        if not isinstance(numero, int) or numero < 0 or len(str(numero)) != 3:
             return (
                 jsonify(
                     {
@@ -170,7 +171,7 @@ def reto06():
 
         numero = request.json.get("numero")
 
-        if not isinstance(numero, int) or len(str(numero)) != 3:
+        if not isinstance(numero, int) or numero < 0 or len(str(numero)) != 3:
             return (
                 jsonify(
                     {
@@ -245,7 +246,7 @@ def reto08():
 
         numero = request.json.get("numero")
 
-        if not isinstance(numero, int) or len(str(numero)) != 5:
+        if not isinstance(numero, int) or numero < 0 or len(str(numero)) != 5:
             return (
                 jsonify(
                     {
@@ -273,7 +274,7 @@ def reto09():
 
         numero = request.json.get("numero")
 
-        if not isinstance(numero, int) or len(str(numero)) != 4:
+        if not isinstance(numero, int) or numero < 0 or len(str(numero)) != 4:
             return (
                 jsonify(
                     {
@@ -317,7 +318,7 @@ def reto10():
             primero ^= segundo
 
         resultado = (
-            " ".join(x for x in range(primero, segundo + 1))
+            " ".join(str(x) for x in range(primero, segundo + 1))
             if segundo - primero <= 10
             else ""
         )
