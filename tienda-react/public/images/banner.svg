@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220">
+  <rect width="900" height="220" fill="#153832"/>
+  <circle cx="60" cy="40" r="3" fill="#E3A72E"/>
+  <circle cx="840" cy="180" r="3" fill="#E3A72E"/>
+  <circle cx="820" cy="30" r="2" fill="#FAF3E7" opacity="0.5"/>
+  <line x1="0" y1="200" x2="900" y2="200" stroke="#E3A72E" stroke-width="2" stroke-dasharray="6 8"/>
+  <text x="450" y="105" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#FAF3E7" text-anchor="middle" font-weight="700" font-style="italic">El Mercadito</text>
+  <text x="450" y="145" font-family="Courier New, monospace" font-size="17" fill="#E3A72E" text-anchor="middle" letter-spacing="3">FRUTAS · ELECTRÓNICA · ROPA</text>
+</svg>
